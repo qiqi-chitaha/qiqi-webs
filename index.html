@@ -4,14 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>神秘surprise来袭</title>
+    <script>
+        function validateForm(){
+            var selectedOption=document.querySelector('input[name="choice1"]:checked');
+            if(!selectedOption){
+                alert("赶快选一个选项！");
+                return false;
+            }
+            if(selectedOption.value!=="b"){//"b"是正确答案
+                alert("错了！气死我了！");
+                return false;
+            }
+            alert("开心开心！你认识我呢！");
+            return true;//允许表单提交
+        }
+    </script>
     <style>
-       body {
+        body {
             margin:200px;
         }
-       input[type="text"] {
-            width:40%;
-            height:20px;
-        } 
+        h3 {
+            color:blueviolet;
+            font-style: inherit;
+            font-weight: 1000;
+            text-indent: 20px;
+        }
+        
         a:link {
             color:pink;
             
@@ -23,6 +41,12 @@
         a:hover {
             color:aquamarine;
             cursor:pointer;
+            box-shadow: 1px 3px 5px 2px #5E80F4;
+        }
+        .shadow:hover{
+            transform:translate(-5px,-5px);
+            box-shadow: 1px 3px 5px 2px #5E80F4;
+            cursor:pointer;
         }
         a:active {
             color:brown;
@@ -30,24 +54,90 @@
         input[type="text"]:focus {
             background-color:bisque;
         }
+        .first::after {
+            content:url(https://www.bing.com/th/id/OGC.7673156748f1e2e2fbe9b9bb03cd3e32?pid=1.7&rurl=https%3a%2f%2fc-ssl.duitang.com%2fuploads%2fblog%2f202403%2f09%2fEWSw7yZYCVqbnGl.gif&ehk=Y7gbfvFofhP1dsZbS2PCs3DGx%2fd%2fKATwFj%2bpUJCTuVI%3d);
+        }
+        th{
+            background-color:rgb(155, 148, 148);
+            color:white;
+        }
+        #A{
+            color:brown;
+            font-weight:800;
+        }
         .next{
             margin:50px 0;
         }
         .next input[type="submit"]{
             background-color:blanchedalmond;
         }
+        input[type="text"] {
+            width:40%;
+            height:20px;
+        }
     </style>
 </head>
 <body>
-    <div class="top">
-        <img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.25fpfPEuqhPgxJDZku4FAgHaDp?w=297&h=169&c=7&r=0&o=5&dpr=2&pid=1.7" width="600px">
+    <div class="container">
+        <div class="top">
+            <img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.25fpfPEuqhPgxJDZku4FAgHaDp?w=297&h=169&c=7&r=0&o=5&dpr=2&pid=1.7" width="600px">
+        </div>
+        <div><h3>恭喜你成为本期幸运儿~</h3></div>
+        <div><h3>这是为您独家设计的惊喜哦~嘻嘻</h3></div>
+        <div><p>为确认您的确是本次被抽中的幸运观众</p></div>
+        <div><p class="first">请允许我对您进行一个简单的小测试</p></div>
+        <div><table>
+            <tr>
+                <th>*请在以下选项中选出哪一个是我*</th>
+            </tr>
+        </table></div>
+        <div><form onsubmit="return validateForm()" method="get">
+            <div><input type="radio" name="choice1" value="a" id="a">
+            <label for="a">66</label><br></div>
+            <div><input type="radio" name="choice1" value="b" id="b">
+            <label for="b">77</label><br></div>
+            <div><input type="radio" name="choice1" value="c" id="c">
+            <label for="c">88</label><br></div>
+            <div><input type="radio" name="choice1" value="d" id="d">
+            <label for="d">99</label><br></div>
+            <div><input type="submit" value="想起来了就赶快提交！" id="A"></div>
+        </form></div>
+        <div class="top">
+            <img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.25fpfPEuqhPgxJDZku4FAgHaDp?w=297&h=169&c=7&r=0&o=5&dpr=2&pid=1.7" width="600px">
+        </div>
+        <form action="javascript:alert('很高兴认识你啦')" >
+            <input type="text" placeholder="小七还不知道你叫啥，给自己取一个名字嘛" required>
+            <input type="submit" value="GO!" >
+      
+        <div class="top">
+            <img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.25fpfPEuqhPgxJDZku4FAgHaDp?w=297&h=169&c=7&r=0&o=5&dpr=2&pid=1.7" width="600px">
+        </div>
+        <form>
+            <a href="javascript:alert('其实没想好准备啥惊喜哈哈哈哈')">惊喜来咯</a>
+        </form>
+        <form>
+            <p>咳咳&nbsp;&nbsp;&nbsp;言归正传</p>
+            <P>亲爱的朋友</P>
+            <P>请允许我为你献上</P>
+            这略显潦草的<a href="https://www.bilibili.com/video/BV1YxbSzSEBg?t=46.8" target="_blank">浪漫</a>
+        </form>
+        <div class="top">
+            <img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.25fpfPEuqhPgxJDZku4FAgHaDp?w=297&h=169&c=7&r=0&o=5&dpr=2&pid=1.7" width="600px">
+        </div>
+        <div class="content">
+            <p>第一期surprise活动马上就要结束啦</p>
+            <p>好舍不得你呜呜呜</p>
+            <table>
+                <tr><td class="typical">点击下面两张表情包即可查看小七的精神状态！</td></tr>
+            </table>
+            <a href="./小七开心鬼.jpg" target="_blank"><img class="shadow" src="https://ts1.tc.mm.bing.net/th/id/OIP-C.JK6JOk0wwuBtWx6QDEouoAHaG6?w=211&h=211&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2" width=30% alt="小七开心鬼"></a>
+            <p class="pic">小七开心鬼</p>
+            <a href="./小七辛酸泪.jpg" target="_blank"><img class="shadow" src="https://ts1.tc.mm.bing.net/th/id/OIP-C.6kJ6r6nyw2JApGTXGQp0EAHaHR?w=186&h=211&c=8&rs=1&qlt=90&o=6&dpr=2&pid=3.1&rm=2" width=30% alt="小七辛酸泪"></a>
+            <p class="pic">小七辛酸泪</p>
+            <div class="top">
+                <img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.25fpfPEuqhPgxJDZku4FAgHaDp?w=297&h=169&c=7&r=0&o=5&dpr=2&pid=1.7" width="600px">
+            </div>
+            <h2>拜拜，期待与你国庆见啦！mua~</h2>
     </div>
-    <form action="javascript:alert('很高兴认识你啦')" >
-        <input type="text" placeholder="小七还不知道你叫啥，给自己取一个名字嘛" required>
-        <input type="submit" value="GO!" >
-    </form>
-    <form action="second2.html" class="next">
-        <input type="submit" value="下一页">
-    </form>
 </body>
 </html>
