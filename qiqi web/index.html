@@ -59,7 +59,12 @@
             color:brown;
             font-weight:800;
         }
-        
+        .next{
+            margin:50px 0;
+        }
+        .next input[type="submit"]{
+            background-color:blanchedalmond;
+        }
     </style>
 </head>
 <body>
@@ -76,7 +81,7 @@
                 <th>*请在以下选项中选出哪一个是我*</th>
             </tr>
         </table></div>
-        <div><form action="second1.html" onsubmit="return validateForm()" method="get">
+        <div><form onsubmit="return validateForm()" method="get">
             <div><input type="radio" name="choice1" value="a" id="a">
             <label for="a">66</label><br></div>
             <div><input type="radio" name="choice1" value="b" id="b">
@@ -87,7 +92,8 @@
             <label for="d">99</label><br></div>
             <div><input type="submit" value="想起来了就赶快提交！" id="A"></div>
         </form></div>
-        
+        <form action="./second1.html" class="next">
+            <input type="submit" value="下一页">
     </div>
 </body>
 </html>
