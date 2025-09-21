@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神秘surprise来袭</title>
+    <script>
+        function validateForm(){
+            var selectedOption=document.querySelector('input[name="choice1"]:checked');
+            if(!selectedOption){
+                alert("赶快选一个选项！");
+                return false;
+            }
+            if(selectedOption.value!=="b"){//"b"是正确答案
+                alert("错了！气死我了！");
+                return false;
+            }
+            alert("开心开心！你认识我呢！");
+            return true;//允许表单提交
+        }
+    </script>
+    <style>
+        body {
+            margin:200px;
+        }
+        h3 {
+            color:blueviolet;
+            font-style: inherit;
+            font-weight: 1000;
+            text-indent: 20px;
+        }
+        
+        a:link {
+            color:pink;
+            
+        }    
+        a:visited {
+            color:blueviolet;
+            
+        }
+        a:hover {
+            color:aquamarine;
+            cursor:pointer;
+        }
+        a:active {
+            color:brown;
+        }
+        input[type="text"]:focus {
+            background-color:bisque;
+        }
+        .first::after {
+            content:url(https://www.bing.com/th/id/OGC.7673156748f1e2e2fbe9b9bb03cd3e32?pid=1.7&rurl=https%3a%2f%2fc-ssl.duitang.com%2fuploads%2fblog%2f202403%2f09%2fEWSw7yZYCVqbnGl.gif&ehk=Y7gbfvFofhP1dsZbS2PCs3DGx%2fd%2fKATwFj%2bpUJCTuVI%3d);
+        }
+        th{
+            background-color:rgb(155, 148, 148);
+            color:white;
+        }
+        #A{
+            color:brown;
+            font-weight:800;
+        }
+        .next{
+            margin:50px 0;
+        }
+        .next input[type="submit"]{
+            background-color:blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <img src="https://tse3-mm.cn.bing.net/th/id/OIP-C.25fpfPEuqhPgxJDZku4FAgHaDp?w=297&h=169&c=7&r=0&o=5&dpr=2&pid=1.7" width="600px">
+        </div>
+        <div><h3>恭喜你成为本期幸运儿~</h3></div>
+        <div><h3>这是为您独家设计的惊喜哦~嘻嘻</h3></div>
+        <div><p>为确认您的确是本次被抽中的幸运观众</p></div>
+        <div><p class="first">请允许我对您进行一个简单的小测试</p></div>
+        <div><table>
+            <tr>
+                <th>*请在以下选项中选出哪一个是我*</th>
+            </tr>
+        </table></div>
+        <div><form onsubmit="return validateForm()" method="get">
+            <div><input type="radio" name="choice1" value="a" id="a">
+            <label for="a">66</label><br></div>
+            <div><input type="radio" name="choice1" value="b" id="b">
+            <label for="b">77</label><br></div>
+            <div><input type="radio" name="choice1" value="c" id="c">
+            <label for="c">88</label><br></div>
+            <div><input type="radio" name="choice1" value="d" id="d">
+            <label for="d">99</label><br></div>
+            <div><input type="submit" value="想起来了就赶快提交！" id="A"></div>
+        </form></div>
+        <form action="./second1.html" class="next">
+            <input type="submit" value="下一页">
+    </div>
+</body>
+</html>
